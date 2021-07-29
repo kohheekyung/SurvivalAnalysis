@@ -23,7 +23,7 @@ Jinsung Yoon, 2018, GAIN: Missing Data Imputation using Generative Adversarial N
 Data preprocessing of ADNI
 -	Min/Max Normalization each feature range of [0, 1]
 -	Encode string-value features to int-value label
-<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/GAIN_preprocessing.png" width="100">
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/GAIN_preprocessing.png" width="300">
 
 Generator
 - Input  - (1) Real data matrix (2)  Random vector at Nan-value (3) Mask matrix
@@ -37,14 +37,14 @@ Discriminator
 - Loss - Cross entropy 
 
 #### Imputation result
-<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/imputation.png" width="500">
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/imputation.png" width="800">
 
 ### Survival analysis - DL based
 Data preprocessing of ADNI for survial analysis
 - Standardize numerical feautures
 - Encode string-value features to int-value label
 - Categorize target time to multi label
-<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/mlp_preprocessing.png" width="500">
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/mlp_preprocessing.png" width="300">
 
 Model
 - Multi layer perceptron with three hidden layer, RELU activation
