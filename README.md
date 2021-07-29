@@ -37,7 +37,7 @@ Jinsung Yoon, 2018, GAIN: Missing Data Imputation using Generative Adversarial N
 - Loss - Cross entropy 
 
 ### Imputation result
-<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/imputation.png" width="800" align ="center">
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/imputation.png" align ="center" width="800">
 
 ## Survival analysis - DL based
 1. Data preprocessing of ADNI for survial analysis
@@ -51,12 +51,12 @@ Jinsung Yoon, 2018, GAIN: Missing Data Imputation using Generative Adversarial N
 - Loss - categorical crossentropy
 
 ### Comparison with Kaplan-Meier based survival function
-<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/result.png" width="700" align ="center">
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/result.png" align ="center" width="700">
 
 ### Feature Importance
 This is training history of DL based survival analysis.
 
-<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/loss.png" width="700" align ="center">
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/loss.png" align="center" width="700">
 
 If remove important features such as 'EcogPtLang', 'EcogPtLang_bl', training is not progressive.
 
