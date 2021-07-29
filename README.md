@@ -6,7 +6,7 @@ The dataset is based on open dataset ADNI.
 A csv file of ADNI contains information of patients (Demography, Clinical Data, Convert Time).
 Detailed information can be found in http://adni.loni.usc.edu/methods/documents/.
 
-### Missing data problem - GAIN
+## Missing data problem - GAIN
 The ADNI dataset have missing values(features not label). To solve the problems, the missing values were imputed by generative model.
 The GAIN (Generative Adversarial Imputation Networks) is known to solve missing value. 
 
@@ -19,44 +19,44 @@ Why missing value problem happens
 Network architecture and details are described in the paper (https://arxiv.org/pdf/1806.02920.pdf).
 Jinsung Yoon, 2018, GAIN: Missing Data Imputation using Generative Adversarial Nets, ICML.
 
-#### Implementation Details
-Data preprocessing of ADNI
+### Implementation Details
+1. Data preprocessing of ADNI
 -	Min/Max Normalization each feature range of [0, 1]
 -	Encode string-value features to int-value label
 <img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/GAIN_preprocessing.png" width="300">
 
-Generator
+2. Generator
 - Input  - (1) Real data matrix (2)  Random vector at Nan-value (3) Mask matrix
 - output - Imputed data
 - Loss -  (1) Mean Square Error ( Real data & Imputed data) (2) Adversarial loss
 
-Discriminator 
+3. Discriminator 
 - Input - Imputed data from generator
 - Output - Mask vector  [ real (1), imputed (0), confusing data (0.5) ]
 - Hint mask  - help training of discriminator 
 - Loss - Cross entropy 
 
-#### Imputation result
+### Imputation result
 <img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/imputation.png" width="800">
 
-### Survival analysis - DL based
-Data preprocessing of ADNI for survial analysis
+## Survival analysis - DL based
+1. Data preprocessing of ADNI for survial analysis
 - Standardize numerical feautures
 - Encode string-value features to int-value label
 - Categorize target time to multi label
 <img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/mlp_preprocessing.png" width="300">
 
-Model
+2. Model
 - Multi layer perceptron with three hidden layer, RELU activation
 - Loss - categorical crossentropy
 
-#### Comparison with Kaplan-Meier based survival function
-<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/result.png" width="500">
+### Comparison with Kaplan-Meier based survival function
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/result.png" width="600">
 
-#### Feature Importance
+### Feature Importance
 This is training history of DL based survival analysis.
 
-<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/loss.png" width="500">
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/loss.png" width="600">
 
 If remove important features such as 'EcogPtLang', 'EcogPtLang_bl', training is not progressive.
 
