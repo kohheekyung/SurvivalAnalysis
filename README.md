@@ -37,6 +37,9 @@ Jinsung Yoon, 2018, GAIN: Missing Data Imputation using Generative Adversarial N
 - Loss - Cross entropy 
 
 ### Imputation result
+RMSE is model evaluation metric
+<img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/rmse.png">
+
 <img src="https://github.com/kohheekyung/SurvivalAnalysis/blob/main/resources/imputation.png" align ="center" width="800">
 
 ## Survival analysis - DL based
